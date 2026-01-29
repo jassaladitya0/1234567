@@ -1,0 +1,250 @@
+:root {
+    --gold: #d4af37;
+    --rose-gold: #b76e79;
+    --deep-red: #800020;
+    --soft-pink: #f8bbd0;
+    --glass-bg: rgba(255, 255, 255, 0.15);
+    --premium-shadow: 0 8px 32px 0 rgba(128, 0, 32, 0.37);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(-45deg, #2c0404, #800020, #2c0404, #4a0404);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color: white;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero,
+.section {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.glass-premium {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--premium-shadow);
+    padding: 50px;
+    max-width: 650px;
+    width: 100%;
+    text-align: center;
+}
+
+.title-premium {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: var(--soft-pink);
+    text-shadow: 0 0 10px rgba(248, 187, 208, 0.5);
+    margin-bottom: 20px;
+}
+
+.subtitle-premium {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem;
+    color: var(--gold);
+}
+
+.message-premium,
+.apology-text,
+.final-message {
+    font-size: 1.3rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+    margin: 20px auto;
+    width: 80%;
+}
+
+.gold-btn {
+    background: transparent;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.4s;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.gold-btn:hover {
+    background: var(--gold);
+    color: white;
+    box-shadow: 0 0 20px var(--gold);
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.btn-premium {
+    padding: 18px 45px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-weight: 600;
+}
+
+.yes-glow {
+    background: var(--deep-red);
+    color: white;
+    box-shadow: 0 0 15px var(--deep-red);
+}
+
+.yes-glow:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 30px var(--deep-red);
+}
+
+.no-jump {
+    background: #333;
+    color: #999;
+}
+
+/* Background Effects */
+.stars-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.star {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    animation: twinkle 2s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 1;
+        scale: 1.2;
+    }
+}
+
+.heart {
+    position: absolute;
+    font-size: 20px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Success Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.hidden {
+    display: none;
+}
+
+.success-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    color: var(--soft-pink);
+}
+
+.celebration-anim {
+    font-size: 3rem;
+    margin: 30px 0;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+@media (max-width: 600px) {
+    .title-premium {
+        font-size: 3.5rem;
+    }
+
+    .glass-premium {
+        padding: 30px;
+    }
+
+    .btn-premium {
+        padding: 15px 30px;
+        font-size: 1rem;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Queen ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="stars-container" id="stars-container"></div>
+    <div class="heart-container" id="heart-container"></div>
+
+    <section id="hero" class="hero fade-in">
+        <div class="content glass-premium">
+            <h1 class="title-premium">Sunno... ❤️</h1>
+            <p class="message-premium">Tumhe pata hai? Tumhara gussa bhi mujhe pyara lagta hai, par tumhari narazgi mera
+                dum ghotti hai. I'm sorry for everything.</p>
+            <button class="gold-btn" onclick="scrollToSection('apology')">Tap to see my heart ✨</button>
+        </div>
+    </section>
+
+    <section id="apology" class="section">
+        <div class="card glass-premium">
+            <h2 class="subtitle-premium">I'm Truly Sorry</h2>
+            <div class="divider"></div>
+            <p class="apology-text">Maana galti meri thi, par irada tumhara dil dukhane ka kabhi nahi tha. Tum meri
+                zindagi ka wo hissa ho jiske bina main mukammal nahi hoon.</p>
+            <div class="sparkle-emoji">✨🥺✨</div>
+            <button class="gold-btn" onclick="scrollToSection('proposal')">Kya ab maan bhi jaoge? ❤️</button>
+        </div>
+    </section>
+
+    <section id="proposal" class="section">
+        <div class="card glass-premium proposal-card">
+            <h2 class="dancing-text">Hum Phir Se Shuru Karein?</h2>
+            <p class="final-message">Main waada karta hoon, tumhe pehle se bhi zyada pyar karunga. Har din tumhe special
+                feel karaunga.</p>
+            <h3 class="proposal-question">Will You Be My Forever? 💍</h3>
+
+            <div class="button-group">
+                <button id="yesBtn" class="btn-premium yes-glow">YES, FOREVER! ❤️</button>
+                <button id="noBtn" class="btn-premium no-jump">No 🥺</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="success-modal" class="modal hidden">
+        <div class="modal-content glass-premium">
+            <h1 class="success-title">Thank You My Love! �</h1>
+            <p>I can't wait to start our journey again. Sending a message to confirm our love...</p>
+            <div class="celebration-anim">💍✨❤️✨💖</div>
+            <p class="sending-text">Redirecting to WhatsApp...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
