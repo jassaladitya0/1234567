@@ -1,4 +1,4 @@
-const PHONE_NUMBER = "+91980503540"; // Your number
+const PHONE_NUMBER = "+911234567890"; // Your number
 
 function scrollToSection(id) {
     document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
